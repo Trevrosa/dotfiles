@@ -110,7 +110,7 @@ config.command_palette_rows = 10
 --> make the window buttons in-line with tab bar:
 config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
 --> font
-config.font = wezterm.font "CaskaydiaCove Nerd Font Mono"
+config.font = wezterm.font("Cascadia Mono NF", { weight = "DemiBold" })
 config.font_size = 12
 
 return config
