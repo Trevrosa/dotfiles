@@ -35,8 +35,8 @@ config.keys = {
 }
 --> remove default ctrl shift keybind
 for i = 0, 9 do
-  -- we have custom keybinds for 2 & 3
-  if i == 2 or i == 3 then
+  -- we have custom keybinds for 1 & 2 & 3
+  if i <= 3 then
     goto continue
   end
   -- number 0 is the tenth key from the left.
