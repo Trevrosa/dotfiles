@@ -1,9 +1,10 @@
 local wezterm = require "wezterm"
 
 local config = wezterm.config_builder()
+config:set_strict_mode(true)
 
 -- keymap
--- shifted number = this[number]
+-- 1, 2, 3, etc.
 local shifted_nums = { "!", "@", "#", "$", "%", "^", "&", "*", "(", ")" }
 config.keys = {
   {
@@ -35,7 +36,7 @@ config.keys = {
 }
 --> remove default ctrl shift keybind
 for i = 0, 9 do
-  -- we have custom keybinds for 1 & 2 & 3
+  -- we have custom keybinds for 1, 2, and 3
   if i <= 3 then
     goto continue
   end
@@ -61,7 +62,7 @@ end
 
 -- functionality
 --> powershell core
-config.default_prog = { "pwsh" }
+config.default_prog = { "pwsh", "-wd", wezterm.home_dir }
 --> make initial window size like windows terminal:
 config.initial_cols = 120
 config.initial_rows = 30
