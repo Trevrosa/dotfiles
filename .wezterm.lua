@@ -33,6 +33,16 @@ config.keys = {
     mods = "CTRL | ALT",
     action = wezterm.action.ActivateTab(-1),
   },
+  {
+    key = "DownArrow",
+    mods = "CTRL | SHIFT",
+    action = wezterm.action.ScrollToBottom
+  },
+  {
+    key = "UpArrow",
+    mods = "CTRL | SHIFT",
+    action = wezterm.action.ScrollToTop
+  }
 }
 --> remove default ctrl shift keybind
 for i = 0, 9 do
@@ -62,7 +72,8 @@ end
 
 -- functionality
 --> powershell core
-config.default_prog = { "pwsh", "-wd", wezterm.home_dir }
+config.default_cwd = wezterm.home_dir
+config.default_prog = { "pwsh" }
 --> make initial window size like windows terminal:
 config.initial_cols = 120
 config.initial_rows = 30
