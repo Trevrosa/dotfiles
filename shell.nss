@@ -1,4 +1,4 @@
-﻿settings
+settings
 {
 	priority=1
 	exclude.where = !process.is_explorer
@@ -101,7 +101,7 @@ menu(where=@(this.count == 0) type='taskbar' image=icon.settings expanded=true)
 {
 	item(title="Task Manager" image=icon.task_manager cmd='taskmgr.exe')
 	item(title="System Informer" sep=both image=icon.task_manager cmd='systeminformer.exe')
-	item(title="Everything" sep=both image='C:/Users/trevo/scoop/persist/nilesoft-shell/everything.ico' cmd='everything.exe')
+	item(title="Everything" sep=both image='@user.home/scoop/persist/nilesoft-shell/everything.ico' cmd='everything.exe')
 	item(title="Taskbar Settings" sep=both image=inherit cmd='ms-settings:taskbar')
 }
 
@@ -117,7 +117,7 @@ menu(where=@(this.count == 0) type='taskbar' image=icon.settings expanded=true)
 // item(where=package.exists("WindowsTerminal") sep="both" type="back.directory | directory | desktop" title=title.Windows_Terminal admin=key.shift() image='@package.path("WindowsTerminal")\WindowsTerminal.exe' cmd="wt.exe" arg=`-w 0 nt -d "@sel.path\."`)
 
 // wezterm (works, but doesnt attach to new tab)
-item(sep="both" type="back.directory | directory | desktop" title="WezTerm" admin=key.shift() image='C:/Users/trevo/scoop/apps/wezterm-nightly/current/wezterm-gui.exe' cmd="wezterm.exe" arg=`start --new-tab --cwd "@sel.path"` window=hidden)
+item(sep="both" type="back.directory | directory | desktop" title="WezTerm" admin=key.shift() image='@user.home/scoop/apps/wezterm-nightly/current/wezterm-gui.exe' cmd="wezterm.exe" arg=`start --new-tab --cwd "@sel.path"` window=hidden)
 
 // create shortcut 
 // modify(where=)
