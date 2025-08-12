@@ -1,0 +1,21 @@
+[credential "https://github.com"]
+        helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+        helper = !/usr/bin/gh auth git-credential
+[user]
+        name = Trevor Chan
+        email = trev@trevrosa.dev
+# store the email pass
+[credential]
+        helper = store
+[sendemail]
+        smtpServer = smtp.gmail.com
+        smtpServerPort = 587
+        smtpEncryption = tls
+        confirm = always
+[include]
+        path = ~/.gitconfig.local
+[pull]
+        rebase = false
+[init]
+        defaultBranch = main
