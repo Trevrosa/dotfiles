@@ -27,6 +27,17 @@ config.keys = {
       DomainName = 'WSL:Debian'
     }
   },
+  -- CTRL+SHIFT+% split vertical, CTRL+SHIFT+", split horizontal
+  {
+    key = "%",
+    mods = "CTRL | SHIFT | ALT",
+    action = wezterm.action.SplitVertical
+  },
+  {
+    key = "\"",
+    mods = "CTRL | SHIFT | ALT",
+    action = wezterm.action.SplitHorizontal
+  },
   -- goto last tab
   {
     key = "0",
