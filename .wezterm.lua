@@ -44,6 +44,7 @@ config.keys = {
     mods = "CTRL | ALT",
     action = wezterm.action.ActivateTab(-1),
   },
+  -- more scroll controls
   {
     key = "DownArrow",
     mods = "CTRL | SHIFT",
@@ -53,6 +54,17 @@ config.keys = {
     key = "UpArrow",
     mods = "CTRL | SHIFT",
     action = wezterm.action.ScrollToTop
+  },
+  -- remove font resizing CTRL+ keybinds
+  {
+    key = "-",
+    mods = "CTRL",
+    action = wezterm.action.DisableDefaultAssignment
+  },
+  {
+    key = "=",
+    mods = "CTRL",
+    action = wezterm.action.DisableDefaultAssignment
   }
 }
 --> remove default ctrl shift keybind
