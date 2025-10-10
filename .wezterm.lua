@@ -65,6 +65,16 @@ config.keys = {
     key = "=",
     mods = "CTRL",
     action = wezterm.action.DisableDefaultAssignment
+  },
+  {
+    key = "_",
+    mods = "CTRL | SHIFT",
+    action = wezterm.action.DisableDefaultAssignment
+  },
+  {
+    key = "+",
+    mods = "CTRL | SHIFT",
+    action = wezterm.action.DisableDefaultAssignment
   }
 }
 --> remove default ctrl shift keybind
