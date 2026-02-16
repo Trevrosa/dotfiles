@@ -20,13 +20,13 @@ config.keys = {
       DomainName = "SSH:pi"
     }
   },
-  {
-    key = shifted_nums[3],
-    mods = "CTRL | SHIFT",
-    action = wezterm.action.SpawnTab {
-      DomainName = 'WSL:Debian'
-    }
-  },
+  --{
+  --  key = shifted_nums[3],
+  --  mods = "CTRL | SHIFT",
+  --  action = wezterm.action.SpawnTab {
+  --    DomainName = 'WSL:Debian'
+  --  }
+  --},
   -- CTRL+SHIFT+% split vertical, CTRL+SHIFT+", split horizontal
   {
     key = "%",
@@ -106,7 +106,7 @@ end
 -- functionality
 --> powershell core
 config.default_cwd = wezterm.home_dir
-config.default_prog = { "pwsh" }
+--config.default_prog = { "pwsh" }
 --> make initial window size like windows terminal:
 config.initial_cols = 120
 config.initial_rows = 30
@@ -153,9 +153,9 @@ config.command_palette_fg_color = fg
 config.command_palette_font_size = 13
 config.command_palette_rows = 10
 --> make the window buttons in-line with tab bar:
-config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
+--config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
 --> font
-config.font = wezterm.font("Cascadia Mono NF", { weight = "DemiBold" })
+config.font = wezterm.font("Caskaydia Mono NF", { weight = "DemiBold" })
 config.font_size = 12
 
 return config
