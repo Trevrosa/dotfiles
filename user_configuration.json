@@ -1,0 +1,216 @@
+{
+    "app_config": {
+        "audio_config": {
+            "audio": "pipewire"
+        },
+        "bluetooth_config": {
+            "enabled": true
+        },
+        "print_service_config": {
+            "enabled": true
+        }
+    },
+    "archinstall-language": "English",
+    "auth_config": {},
+    "bootloader_config": {
+        "bootloader": "Limine",
+        "removable": true,
+        "uki": false
+    },
+    "custom_commands": [],
+    "disk_config": {
+        "btrfs_options": {
+            "snapshot_config": null
+        },
+        "config_type": "manual_partitioning",
+        "device_modifications": [
+            {
+                "device": "/dev/nvme0n1",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": "/dev/nvme0n1p1",
+                        "flags": [
+                            "boot",
+                            "esp"
+                        ],
+                        "fs_type": null,
+                        "mount_options": [],
+                        "mountpoint": null,
+                        "obj_id": "9ce511ea-b109-43b3-8d67-e0cc6a231dbb",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1073741824
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "sectors",
+                            "value": 2048
+                        },
+                        "status": "delete",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "dev_path": "/dev/nvme0n1p2",
+                        "flags": [],
+                        "fs_type": null,
+                        "mount_options": [],
+                        "mountpoint": null,
+                        "obj_id": "ce379646-ea28-4e5b-a704-71dce8d22432",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1023133351936
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "sectors",
+                            "value": 2099200
+                        },
+                        "status": "delete",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "boot",
+                            "esp"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "76c16952-669b-4f2d-8fcd-0fa3facc523c",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 1
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [
+                            {
+                                "mountpoint": "/",
+                                "name": "@"
+                            },
+                            {
+                                "mountpoint": "/home",
+                                "name": "@home"
+                            },
+                            {
+                                "mountpoint": "/var/log",
+                                "name": "@var-log"
+                            },
+                            {
+                                "mountpoint": "/var/cache",
+                                "name": "@var-cache"
+                            }
+                        ],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "btrfs",
+                        "mount_options": [],
+                        "mountpoint": null,
+                        "obj_id": "ef293a3e-d075-4e7c-a18a-e503e9bb163d",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1023133351936
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1074790400
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": false
+            }
+        ]
+    },
+    "hostname": "trevor",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US.UTF-8"
+    },
+    "mirror_config": {
+        "custom_repositories": [],
+        "custom_servers": [],
+        "mirror_regions": {
+            "Hong Kong": [
+                "http://hkg.mirror.rackspace.com/archlinux/$repo/os/$arch",
+                "https://hkg.mirror.rackspace.com/archlinux/$repo/os/$arch",
+                "https://arch-mirror.wtako.net/$repo/os/$arch",
+                "https://hk.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "http://mirror.xtom.com.hk/archlinux/$repo/os/$arch",
+                "https://mirror.xtom.com.hk/archlinux/$repo/os/$arch",
+                "http://mirror-hk.koddos.net/archlinux/$repo/os/$arch",
+                "https://mirror-hk.koddos.net/archlinux/$repo/os/$arch"
+            ]
+        },
+        "optional_repositories": []
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "ntp": true,
+    "packages": [
+        "base-devel",
+        "git",
+        "nano",
+        "curl"
+    ],
+    "parallel_downloads": 0,
+    "profile_config": {
+        "gfx_driver": null,
+        "greeter": null,
+        "profile": {}
+    },
+    "script": null,
+    "services": [],
+    "swap": {
+        "algorithm": "zstd",
+        "enabled": true
+    },
+    "timezone": "Asia/Hong_Kong",
+    "version": "3.0.15"
+}
