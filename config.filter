@@ -1,7 +1,5 @@
-+ hypr
-+ hypr/**
-+ waybar
-+ waybar/**
-+ fuzzel
-+ fuzzel/**
++ hypr/***
++ waybar/***
++ fuzzel/***
++ fastfetch/***
 - *
