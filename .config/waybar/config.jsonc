@@ -52,7 +52,7 @@
       }
     },
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{essid} ({signalStrength}%)  ",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
@@ -66,6 +66,13 @@
             "position",
             "length"
         ],
+        "dynamic-importance-order": [
+            "title",
+            "position",
+            "length",
+            "artist"
+        ],
+        "dynamic-len": 50,
         "interval": 3,
         "tooltip": false
     },

@@ -77,7 +77,7 @@ tooltip label {
 }
 
 #cpu {
-  color: @pink;
+  color: @blue;
 }
 
 #memory {
@@ -85,7 +85,7 @@ tooltip label {
 }
 
 #temperature {
-  color: @blue;
+  color: @pink;
 }
 
 #temperature.warning {
