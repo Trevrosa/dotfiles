@@ -24,9 +24,9 @@ tooltip label {
 }
 
 #workspaces {
+  background-color: @surface0;
   border-radius: 1rem;
   margin: 5px;
-  background-color: @surface0;
   margin-left: 1rem;
 }
 
@@ -42,24 +42,87 @@ tooltip label {
 }
 
 /* all modules except for workspaces */
+#cpu,
+#memory,
+#temperature,
+#power-profiles-daemon,
+#network,
+
 #mpris,
+
 #pulseaudio,
 #backlight,
 #battery,
-#temperature,
 #clock,
+
 #tray,
+
 #custom-lock,
 #custom-power {
   background-color: @surface0;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   margin: 5px 0;
 }
 
-#clock {
-  color: @blue;
+/* left-most modules */
+#cpu, #custom-lock, #pulseaudio {
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+/* right-most modules */
+#network, #clock, #custom-power {
   border-radius: 0px 1rem 1rem 0px;
   margin-right: 1rem;
+}
+
+#cpu {
+  color: @pink;
+}
+
+#memory {
+  color: @peach;
+}
+
+#temperature {
+  color: @blue;
+}
+
+#temperature.warning {
+  color: @yellow;
+}
+
+#temperature.critical {
+  color: @red;
+}
+
+#power-profiles-daemon.performance {
+  color: @blue;
+}
+
+#power-profiles-daemon.balanced {
+  color: @rosewater;
+}
+
+#power-profiles-daemon.power-saver {
+  color: @green;
+}
+
+#network {
+  color: @teal;
+}
+
+#mpris {
+  color: @mauve;
+  border-radius: 1rem;
+}
+
+#pulseaudio {
+  color: @maroon;
+}
+
+#backlight {
+  color: @yellow;
 }
 
 #battery {
@@ -74,37 +137,18 @@ tooltip label {
   color: @red;
 }
 
-#backlight {
-  color: @yellow;
+#clock {
+  color: @blue;
 }
 
-#backlight, #battery {
-    border-radius: 0;
-}
-
-#pulseaudio {
-  color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
-}
-
-#mpris {
-  color: @mauve;
+#tray {
   border-radius: 1rem;
 }
 
 #custom-lock {
-    border-radius: 1rem 0px 0px 1rem;
-    color: @lavender;
+  color: @lavender;
 }
 
 #custom-power {
-    margin-right: 1rem;
-    border-radius: 0px 1rem 1rem 0px;
-    color: @red;
-}
-
-#tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
+  color: @red;
 }

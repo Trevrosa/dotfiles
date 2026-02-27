@@ -6,7 +6,11 @@
     "reload_style_on_change": true,
     "modules-left": [
         "hyprland/workspaces",
-        "temperature"
+        "cpu",
+        "memory",
+        "temperature",
+        "power-profiles-daemon",
+        "network"
     ],
     "modules-center": [
         "mpris"
@@ -25,6 +29,34 @@
         "format-icons": {
             "default": ""
         }
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        "tooltip": false
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "mpris": {
         "format": "{dynamic}({status})",
@@ -63,25 +95,12 @@
         "format-charging": "",
         "format-plugged": "",
         "tooltip-format": "Empty in {time} | Drawing {power} W",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+        "format-icons": ["", "", "", "", ""]
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": " {:%d/%m/%Y}",
-        "format": "{:%H:%M}"
+        // "format-alt": "{:%d/%m/%Y}",
+        "format": "{:%a %b %d %I:%M %p}"
     },
     "tray": {
         "icon-size": 21,
@@ -90,7 +109,7 @@
     "custom/lock": {
         "tooltip": false,
         "on-click": "sh -c '(sleep 0.5s; lock --grace 0)' & disown",
-        "format": "",
+        "format": ""
     },
     "custom/power": {
         "tooltip": false,
