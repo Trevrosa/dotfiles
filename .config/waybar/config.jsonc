@@ -109,6 +109,7 @@
         "format-charging": "{}% ",
         "format-plugged": "{}% ",
         "tooltip-format": "Empty in {time} | Drawing {power} W",
+        "tooltip-format-charging": "Full in {time} | Charging at {power} W",
         "format-icons": [
             "",
             "",
