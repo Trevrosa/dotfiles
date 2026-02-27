@@ -1,0 +1,100 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Magniquick/waybar-config-schema/main/schema.json",
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // "width": 1280, // Waybar width
+    "reload_style_on_change": true,
+    "modules-left": [
+        "hyprland/workspaces",
+        "temperature"
+    ],
+    "modules-center": [
+        "mpris"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "clock",
+        "tray",
+        "custom/lock",
+        "custom/power"
+    ],
+    "hyprland/workspaces": {
+        "format": " {icon} ",
+        "format-icons": {
+            "default": ""
+        }
+    },
+    "mpris": {
+        "format": "{dynamic}({status})",
+        "dynamic-order": [
+            "title",
+            "artist",
+            "position",
+            "length"
+        ],
+        "interval": 3,
+        "tooltip": false
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                " "
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "backlight": {
+        "format": "{percent}% ",
+        "tooltip": false
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "",
+        "format-plugged": "",
+        "tooltip-format": "Empty in {time} | Drawing {power} W",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": " {:%d/%m/%Y}",
+        "format": "{:%H:%M}"
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "sh -c '(sleep 0.5s; lock --grace 0)' & disown",
+        "format": "",
+    },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout &",
+        "format": "襤"
+    }
+}
