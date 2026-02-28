@@ -58,7 +58,7 @@
         "format-wifi": "{essid} ({signalStrength}%)  ",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
-        "format-disconnected": "Disconnected ⚠",
+        "format-disconnected": "Disconnected  ",
         "format-alt": "{bandwidthDownBytes}  | {bandwidthUpBytes}  "
     },
     "mpris": {
@@ -92,6 +92,7 @@
         "on-click": "pavucontrol"
     },
     "bluetooth": {
+        "interval": 30,
         "format-on": " {status}",
         "format-connected": " connected ({device_battery_percentage}%)",
         "tooltip-format": "{device_enumerate}",
