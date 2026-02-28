@@ -53,11 +53,13 @@
         }
     },
     "network": {
+        "interval": 15,
+        "max-length": 26,
         "format-wifi": "{essid} ({signalStrength}%)  ",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{bandwidthDownBytes}  | {bandwidthUpBytes}  "
     },
     "mpris": {
         "format": "{dynamic}({status})",
@@ -73,7 +75,7 @@
             "length",
             "artist"
         ],
-        "dynamic-len": 50,
+        "dynamic-len": 42,
         "interval": 3,
         "tooltip": false
     },
