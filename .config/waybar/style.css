@@ -66,23 +66,27 @@ tooltip label {
 }
 
 /* left-most modules */
-#cpu, #pulseaudio, #custom-lock {
+#network, #pulseaudio, #custom-lock {
   border-radius: 1rem 0px 0px 1rem;
   margin-left: 1rem;
 }
 
 /* right-most modules */
-#network, #clock, #tray, #custom-power {
+#power-profiles-daemon, #clock, #tray, #custom-power {
   border-radius: 0px 1rem 1rem 0px;
   margin-right: 1rem;
 }
 
+#network {
+  color: @teal;
+}
+
 #cpu {
-  color: @blue;
+  color: @yellow;
 }
 
 #memory {
-  color: @peach;
+  color: @green;
 }
 
 #temperature {
@@ -107,10 +111,6 @@ tooltip label {
 
 #power-profiles-daemon.power-saver {
   color: @green;
-}
-
-#network {
-  color: @teal;
 }
 
 #mpris {

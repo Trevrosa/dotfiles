@@ -6,11 +6,11 @@
     "reload_style_on_change": true,
     "modules-left": [
         "hyprland/workspaces",
+        "network",
         "cpu",
         "memory",
         "temperature",
-        "power-profiles-daemon",
-        "network"
+        "power-profiles-daemon"
     ],
     "modules-center": [
         "mpris"
@@ -48,8 +48,8 @@
         "format-icons": {
             "default": "",
             "performance": "",
-            "balanced": "",
-            "power-saver": ""
+            "balanced": " ",
+            "power-saver": " "
         }
     },
     "network": {
