@@ -1,0 +1,8 @@
+[general]
+timeout = "1s"
+
+# float bitwarden popups
+[[handler]]
+on = "windowtitlev2"
+when = "(.*),Extension: .+ Bitwarden"
+then = "hyprctl dispatch togglefloating address:0x${REGEX_GROUP_1}; hyprctl dispatch resizewindowpixel -362 -405, address:0x${REGEX_GROUP_1}; hyprctl dispatch centerwindow address:0x${REGEX_GROUP_1}"
