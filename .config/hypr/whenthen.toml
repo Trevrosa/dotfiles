@@ -11,7 +11,7 @@ then = "hyprctl dispatch togglefloating address:0x${REGEX_GROUP_1}; hyprctl disp
 [[handler]]
 on = "createworkspace"
 when = "special:x"
-then = "fuzzel &"
+then = "nohup fuzzel &"
 
 # kill fuzzel when special:x is destroyed
 [[handler]]
